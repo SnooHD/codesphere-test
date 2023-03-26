@@ -1,4 +1,6 @@
+import { useState } from "react";
 import { Icon } from "./Icon/Icon.component";
+import { OptionsOverlay, OptionsOverlayType } from "./OptionsOverlay.component";
 
 interface TableItemProps {
   id: string;
@@ -12,6 +14,16 @@ interface TableProps {
 const getTHStyling = () => "font-normal py-xs px-s";
 
 export const Table = ({ items }: TableProps): JSX.Element => {
+  const [activeOverlay, setActiveOverlay] = useState("");
+  const handleOverlayClick = (type?: OptionsOverlayType) => {
+    switch (type) {
+      case "delete": {
+      }
+    }
+
+    setActiveOverlay("");
+  };
+
   return (
     <table className="text-white font-inter w-full table-auto">
       <thead>
@@ -29,8 +41,21 @@ export const Table = ({ items }: TableProps): JSX.Element => {
             className=" border-b border-gray-lightest"
           >
             <td className="py-xl px-s">{name}</td>
-            <td className="text-center text-gray">
-              <Icon id="more" />
+            <td className="text-center text-gray h-full">
+              <div className="relative h-full">
+                <div
+                  className="w-full h-full"
+                  onClick={() =>
+                    activeOverlay ? setActiveOverlay("") : setActiveOverlay(id)
+                  }
+                >
+                  <Icon id="more" />
+                </div>
+                <OptionsOverlay
+                  active={activeOverlay === id}
+                  onClick={handleOverlayClick}
+                />
+              </div>
             </td>
           </tr>
         ))}

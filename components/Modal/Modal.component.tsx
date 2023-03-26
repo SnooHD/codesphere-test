@@ -32,7 +32,7 @@ export const Modal = ({ isOpen, onModalClose, title, id }: ModalProps) => {
         ${isOpen ? "backdrop-blur-xs" : ""}
       `}
       className={`
-        bg-gray-dark w-full max-w-content rounded shadow-box shadow-white/[.1]
+        bg-gray-dark w-full max-w-content rounded shadow-box shadow-black/[.1]
         transition-transform duration-300
         ${!isActive || !isOpen ? "translate-y-[10px]" : ""}
         ${isOpen ? "translate-y-0" : ""}
