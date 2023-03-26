@@ -1,19 +1,18 @@
 import { Html, Head, Main, NextScript } from "next/document";
 
-import { Inter } from "next/font/google";
-
-const inter = Inter({
-  variable: "--font-inter",
-  display: "swap",
-});
-
 export default function Document() {
   return (
-    <Html
-      lang="en"
-      className={`${inter.variable}`}
-    >
-      <Head />
+    <Html lang="en">
+      <Head>
+        <meta
+          name="description"
+          content="Codesphere workspace code test application"
+        />
+        <link
+          rel="icon"
+          href="/favicon.ico"
+        />
+      </Head>
       <body>
         <Main />
         <NextScript />

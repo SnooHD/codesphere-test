@@ -18,17 +18,29 @@ module.exports = {
         purple: {
           DEFAULT: "#814BF6",
         },
-        boxShadow: {
-          box: "0px 5px 20px 0px rgba(0, 0, 0, 0.1)",
-        },
-        fontFamily: {
-          inter: "var(--font-inter)",
-        },
-        fontSize: {
-          sm: ["12px", "18px"],
-          m: ["14px", "22px"],
-          l: ["20px", "28px"],
-        },
+      },
+      boxShadow: {
+        box: "0px 5px 20px 0px rgba(0, 0, 0, 0.1)",
+      },
+      fontFamily: {
+        inter: "var(--font-inter)",
+      },
+      fontSize: {
+        sm: ["12px", "18px"],
+        m: ["14px", "22px"],
+        l: ["20px", "28px"],
+      },
+      maxWidth: {
+        content: "520px",
+      },
+      borderRadius: {
+        DEFAULT: "3px",
+      },
+      spacing: {
+        sm: "6px",
+        m: "10px",
+        l: "12px",
+        xl: "20px",
       },
     },
   },
