@@ -3,10 +3,12 @@ import React from "react";
 import { PlusIcon } from "./icons/Plus.icon";
 import { BinIcon } from "./icons/Bin.icon";
 import { IconProps } from "@/types/icon.types";
+import { CloseIcon } from "./icons/Close.icon";
 
 export const icons = [
   { id: "plus", value: PlusIcon },
   { id: "bin", value: BinIcon },
+  { id: "close", value: CloseIcon },
 ];
 
 export const Icon = ({ id, className = "" }: IconProps): JSX.Element => {

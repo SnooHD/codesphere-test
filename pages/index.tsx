@@ -1,4 +1,5 @@
 import { Header } from "@/components/Header.component";
+import { Modal } from "@/components/Modal/Modal.component";
 import Head from "next/head";
 
 export default function Home() {

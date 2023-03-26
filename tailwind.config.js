@@ -20,13 +20,13 @@ module.exports = {
         },
       },
       boxShadow: {
-        box: "0px 5px 20px 0px rgba(0, 0, 0, 0.1)",
+        box: "0px 5px 20px 0px",
       },
       fontFamily: {
         inter: "var(--font-inter)",
       },
       fontSize: {
-        sm: ["12px", "18px"],
+        s: ["12px", "18px"],
         m: ["14px", "22px"],
         l: ["20px", "28px"],
       },
@@ -37,10 +37,15 @@ module.exports = {
         DEFAULT: "3px",
       },
       spacing: {
-        sm: "6px",
+        xs: "6px",
+        s: "8px",
         m: "10px",
         l: "12px",
         xl: "20px",
+        xxl: "30px",
+      },
+      blur: {
+        xs: "2px",
       },
     },
   },
