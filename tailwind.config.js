@@ -24,6 +24,11 @@ module.exports = {
         fontFamily: {
           inter: "var(--font-inter)",
         },
+        fontSize: {
+          sm: ["12px", "18px"],
+          m: ["14px", "22px"],
+          l: ["20px", "28px"],
+        },
       },
     },
   },
