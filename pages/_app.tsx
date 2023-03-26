@@ -11,10 +11,10 @@ const inter = Inter({
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <main
+    <div
       className={`${inter.variable} bg-gray-dark h-full flex justify-center`}
     >
       <Component {...pageProps} />
-    </main>
+    </div>
   );
 }

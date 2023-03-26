@@ -1,6 +1,4 @@
-import { icons } from "@/components/Icon/Icon.component";
-
-export type IconIds = "plus" | "bin" | "close";
+export type IconIds = "plus" | "bin" | "close" | "more";
 
 export interface IconProps {
   className?: string;

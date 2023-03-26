@@ -8,8 +8,8 @@ export const CloseIcon = (): JSX.Element => {
       className="rotate-[45deg]"
     >
       <g
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         fill="currentColor"
       >
         <path d="M8.0001 2.48328C8.35908 2.48328 8.6501 2.77429 8.6501 3.13328L8.6501 13.1333C8.6501 13.4923 8.35908 13.7833 8.0001 13.7833C7.64111 13.7833 7.3501 13.4923 7.3501 13.1333L7.3501 3.13328C7.3501 2.77429 7.64111 2.48328 8.0001 2.48328Z" />

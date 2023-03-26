@@ -1,5 +1,6 @@
 import { Header } from "@/components/Header.component";
 import { Modal } from "@/components/Modal/Modal.component";
+import { Table } from "@/components/Table.component";
 import Head from "next/head";
 
 export default function Home() {
@@ -14,7 +15,9 @@ export default function Home() {
       </Head>
       <div className="w-full max-w-content space-y-xl pt-xl">
         <Header />
-        {/* <Table /> */}
+        <main>
+          <Table items={[{ name: "test", id: "1" }]} />
+        </main>
       </div>
     </>
   );
