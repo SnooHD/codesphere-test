@@ -38,10 +38,23 @@ export const Table = ({ items }: TableProps): JSX.Element => {
           {items.map(({ name, id }) => (
             <tr
               key={`table-item-${id}`}
-              className="border-b transition-color duration-300 group border-gray-lightest hover:border-gray-light"
+              className={`
+                border-b transition-color duration-300 group 
+                hover:border-gray-light
+                ${
+                  activeOverlay === id
+                    ? "border-gray-light bg-gray-darkest"
+                    : "border-gray-lightest"
+                }
+              `}
             >
               <td className="py-xl px-s">{name}</td>
-              <td className="text-center transition-color duration-300 cursor-pointer text-gray h-full group-hover:text-white">
+              <td
+                className={`
+                  text-center transition-color duration-300 cursor-pointer  h-full group-hover:text-white
+                  ${activeOverlay === id ? "text-white" : "text-gray"}
+                `}
+              >
                 <div
                   className="h-full"
                   ref={(element: HTMLDivElement) => assignRef(element, id)}
