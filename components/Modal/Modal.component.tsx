@@ -1,16 +1,23 @@
 import ReactModal from "react-modal";
+import { useState } from "react";
 import { Text } from "@/components/Text.component";
 import { Icon } from "@/components/Icon/Icon.component";
 import { CreateWorkspaceModal } from "./Modals/CreateWorkspace.modal";
-import { ModalProps } from "@/types/modal.types";
-import { useState } from "react";
+import { ErrorModal } from "./Modals/Error.modal";
 
-export const modals = [{ id: "createWorkspace", value: CreateWorkspaceModal }];
+import type { ModalIds, ModalProps } from "@/types/modal.types";
+
+export const modals = [
+  { id: "createWorkspace", value: CreateWorkspaceModal },
+  { id: "error", value: ErrorModal },
+];
 
 ReactModal.setAppElement("body");
 
 export const Modal = ({ isOpen, onModalClose, title, id }: ModalProps) => {
-  const modal = modals.find((modal) => modal.id === id);
+  const setActiveModal = (id: ModalIds) => setActiveModalId(id);
+  const [activeModalId, setActiveModalId] = useState(id);
+  const modal = modals.find((modal) => modal.id === activeModalId);
   const ModalElement = modal?.value;
 
   const [isActive, setIsActive] = useState(false);
@@ -47,7 +54,7 @@ export const Modal = ({ isOpen, onModalClose, title, id }: ModalProps) => {
           size="l"
           className="w-full text-center"
         >
-          {title}
+          {activeModalId === "error" ? "Something went wrong..." : title}
         </Text>
         <button
           type="button"
@@ -62,9 +69,13 @@ export const Modal = ({ isOpen, onModalClose, title, id }: ModalProps) => {
       </div>
       <div className="overflow-auto p-xxl space-y-l">
         {ModalElement ? (
-          <ModalElement isActive={isActive} />
+          <ModalElement
+            isActive={isActive}
+            closeModal={onModalClose}
+            setModal={setActiveModal}
+          />
         ) : (
-          <>Modal: {id} not found</>
+          <span className="text-white">{`Modal: "${id}" not found`}</span>
         )}
       </div>
     </ReactModal>

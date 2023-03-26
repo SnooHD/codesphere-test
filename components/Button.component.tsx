@@ -1,6 +1,7 @@
-import type { ButtonHTMLAttributes, PropsWithChildren } from "react";
-import { IconIds } from "@/types/icon.types";
 import { Icon } from "./Icon/Icon.component";
+
+import type { ButtonHTMLAttributes, PropsWithChildren } from "react";
+import type { IconIds } from "@/types/icon.types";
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   icon?: IconIds;

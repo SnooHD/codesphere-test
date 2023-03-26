@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { Button } from "./Button.component";
-import { Modal } from "./Modal/Modal.component";
+import { Button } from "@/components/Button.component";
+import { Modal } from "@/components//Modal/Modal.component";
 
 export const Header = (): JSX.Element => {
   const [openModal, setOpenModal] = useState(false);

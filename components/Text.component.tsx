@@ -1,5 +1,6 @@
-import type { PropsWithChildren } from "react";
 import { createElement } from "react";
+
+import type { PropsWithChildren } from "react";
 
 type TextSizes = "l" | "m" | "s";
 

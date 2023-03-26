@@ -1,0 +1,2 @@
+export const CODESPHERE_BACKEND = process.env.NEXT_PUBLIC_CODESPHERE_BACKEND;
+export const TEAM_ID = process.env.NEXT_PUBLIC_CODESPHERE_TEAM_ID;

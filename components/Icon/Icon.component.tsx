@@ -1,5 +1,3 @@
-import React from "react";
-
 import { PlusIcon } from "./icons/Plus.icon";
 import { BinIcon } from "./icons/Bin.icon";
 import { IconProps } from "@/types/icon.types";
